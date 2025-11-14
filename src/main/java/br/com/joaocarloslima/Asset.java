@@ -17,7 +17,7 @@ public abstract class Asset {
         this.direcao = direcao;
     }
 
-    public abstract void mover();
+    public void mover(){};
 
     public boolean colidiuCom(Asset asset){
         return x < asset.getX() + 50 &&

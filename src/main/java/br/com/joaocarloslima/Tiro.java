@@ -11,7 +11,10 @@ public class Tiro extends Asset {
         this.poder = poder;
 
         String path = "images/laser/laser" + poder + ".png";
-        this.imagem = new ImageView(app.class.getResource(path).toString());
-    };
+        this.setImagem(new ImageView(App.class.getResource(path).toString()));
+    }
 
+    public int getPoder() {
+        return poder;
+    }
 }
