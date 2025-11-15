@@ -1,5 +1,7 @@
 package br.com.joaocarloslima;
 
+import javafx.scene.image.ImageView;
+
 import java.util.Random;
 
 public class Meteoro extends Asset {
@@ -15,6 +17,10 @@ public class Meteoro extends Asset {
         int tamanhoAleatorio = gerador.nextInt((tamanhoMax - tamanhoMin) + 1) + tamanhoMin;
         this.tamanho = tamanhoAleatorio ;
         this.poder = tamanho;
+
+        String path = "images/meteoro/meteoro" + tamanho + ".png";
+        this.setImagem(new ImageView(App.class.getResource(path).toString()));
+
     }
 
     public void tomarTiro(Tiro tiro){
