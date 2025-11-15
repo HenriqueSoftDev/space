@@ -17,7 +17,14 @@ public abstract class Asset {
         this.direcao = direcao;
     }
 
-    public void mover(){};
+    public void mover(){
+        if (this.getDirecao().equals(Direcao.CIMA)){
+            setX(getY() + getVelocidade());
+        }
+        if (this.getDirecao().equals(Direcao.BAIXO)){
+            setX(getY() - getVelocidade());
+        }
+    };
 
     public boolean colidiuCom(Asset asset){
         return x < asset.getX() + 50 &&
